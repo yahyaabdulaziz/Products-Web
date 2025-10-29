@@ -1,0 +1,256 @@
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8eef5 100%);
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+  pointer-events: none;
+}
+
+.auth-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 50px;
+  width: 200%;
+  max-width: 500px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  position: relative;
+  z-index: 1;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.auth-card h1 {
+  margin: 0 0 10px 0;
+  font-size: 32px;
+  color: #000000;
+  text-align: center;
+  font-weight: 700;
+}
+
+.auth-subtitle {
+  margin: 0 0 40px 0;
+  color: #666;
+  text-align: center;
+  font-size: 15px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+}
+
+.form-group label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.form-group input {
+  padding: 14px 18px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  outline: none;
+  background: #ffffff;
+  color: #000000;
+}
+
+.form-group input::placeholder {
+  color: #999;
+}
+
+.form-group input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15);
+  background: #ffffff;
+}
+
+.auth-button {
+  padding: 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-top: 10px;
+}
+
+.auth-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(102, 126, 234, 0.4);
+}
+
+.auth-button:active {
+  transform: translateY(0);
+}
+
+.auth-link {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 15px;
+  color: #666;
+}
+
+.auth-link a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.auth-link a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .auth-card {
+    padding: 40px 30px;
+    max-width: 100%;
+  }
+
+  .auth-card h1 {
+    font-size: 28px;
+  }
+
+  .form-group input {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+
+  .auth-button {
+    padding: 14px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-container {
+    padding: 15px;
+  }
+
+  .auth-card {
+    padding: 30px 20px;
+    border-radius: 16px;
+  }
+
+  .auth-card h1 {
+    font-size: 24px;
+  }
+
+  .auth-subtitle {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+
+  .form-group {
+    gap: 8px;
+  }
+
+  .form-group label {
+    font-size: 14px;
+  }
+
+  .form-group input {
+    padding: 12px 14px;
+    font-size: 14px;
+  }
+
+  .auth-button {
+    padding: 13px;
+    font-size: 15px;
+  }
+
+  .auth-link {
+    font-size: 14px;
+  }
+}
+
+/* Large screens - better use of space */
+@media (min-width: 1200px) {
+  .auth-card {
+    max-width: 550px;
+    padding: 60px;
+  }
+
+  .auth-card h1 {
+    font-size: 36px;
+  }
+
+  .auth-subtitle {
+    font-size: 16px;
+  }
+
+  .form-group input {
+    padding: 16px 20px;
+    font-size: 16px;
+  }
+
+  .auth-button {
+    padding: 18px;
+    font-size: 18px;
+  }
+}
+
+
+.auth-logo {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin: 0 auto 30px;
+  display: block;
+  animation: fadeInScale 0.6s ease-out;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.auth-logo {
+  width: 200px;
+  height: 160px;
+  object-fit: contain;
+  margin: 0 auto 30px;
+  display: block;
+  animation: fadeInScale 0.6s ease-out;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
