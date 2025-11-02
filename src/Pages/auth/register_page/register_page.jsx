@@ -37,13 +37,13 @@ function RegisterPage({ onRegister }) {
 
     console.log(formData);
     authAPI
-      .register(
-        formData.firstName,
-        formData.lastName,
-        formData.email,
-        formData.age,
-        formData.password
-      )
+      .register({
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        email: formData.email,
+        age: formData.age,
+        password: formData.password
+      })
       .then((data) => {
         localStorage.setItem("token", data.access_token);
         localStorage.setItem("user", JSON.stringify(data.user));
